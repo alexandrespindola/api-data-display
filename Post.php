@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 class Post extends Category
 {
     public string $body;

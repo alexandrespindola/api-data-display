@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class Category
 {
     public string $type;
@@ -18,7 +20,7 @@ class Category
     public function display(): string
     {
         return "<h2>" . ucfirst($this->type) . "</h2>\n" .
-            "<p>ID: " . htmlspecialchars($this->id) . "</p>\n" .
+            "<p>ID: " . htmlspecialchars((string)$this->id) . "</p>\n" .
             "<p>Title: " . htmlspecialchars($this->title) . "</p>";
     }
 }
